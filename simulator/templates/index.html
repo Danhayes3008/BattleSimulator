@@ -7,5 +7,26 @@
 </head>
 <body>
     <h1>Hello World</h1>
+    {% for ship in warship %}
+    <form action="">
+        {% csrf_token %}
+        <div>
+            <h3>Warships</h3>
+            <table>
+                <tr>
+                    <th>Warship</th>
+                    <th>Attacker</th>
+                    <th>Defender</th>
+                </tr>                
+                <tr>
+                    <th>{{ ship.name }}</th>
+                    <th><input type="text" id="attacker" placeholder="attacker"></th>
+                    <th><input type="text" id="defender" placeholder="Defender"></th>
+                </tr>
+            </table>
+        </div>
+        
+    </form>
+    {% endfor %}
 </body>
 </html>
